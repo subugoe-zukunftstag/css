@@ -1,7 +1,4 @@
-# Dokumentation für den Girlsday/Zukunftstag 2016 an der SUB Göttingen
+# Dokumentation für den Girlsday/Zukunftstag 2016
 
-Die Dokumentation gliedert sich in zwei Bereiche:
-* Dokumentation und
-* Spiel
-
+Dieser Teil der Dokumentation beschaeftigt sich mit HTML
 
