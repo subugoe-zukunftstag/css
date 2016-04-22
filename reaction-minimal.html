@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=de>
+  <head>
+  <meta charset="utf-8">
+<title>Mein erstes Onlinespiel</title>
+<script src="jquery.min.js"></script>
+<style>
+body {
+  background-color: lightblue;
+}
+#snake {
+  width: 100px;
+  position: absolute;
+}
+</style>
+    
+    <script>
+
+// Globale Variable timer
+var timer;
+
+// Funktion für des Spiels
+var startGame = function() {
+    
+	// alten timeout löschen (falls vorhanden)
+	clearTimeout( timer );
+	
+	// Schlange versetzen
+	$("#snake")
+	    .css("left", Math.random()*window.innerWidth/2)
+	    .css("top", Math.random()*window.innerHeight/2);
+	
+	// aktuellen Timeout in Variablen speichern
+	timer = setTimeout( function() { stopGame() }, 2000 );
+	
+}
+
+// Funktion zum Beenden des Spiels
+var stopGame = function() {
+    $("#snake").css("display","none");
+}
+
+$(function() {
+
+    // Spiel neu starten wenn Schlange angeklickt wird
+    $("#snake").click(function() {
+	startGame();
+    });
+
+    // Spiel das erste mal starten
+    startGame();
+
+});
+
+</script>
+
+</head>
+<body>
+
+  <img id="snake" src="snake.svg">
+  <div id="lost"></div>
+
+
+</body>

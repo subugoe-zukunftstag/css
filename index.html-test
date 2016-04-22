@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Girlsday 2014</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link href="lightbox/css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="lightbox/css/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script src="lightbox/js/jquery-1.10.2.min.js"></script>
+    <script src="lightbox/js/lightbox-2.6.min.js"></script>
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+      body {
+      background: #282828;
+      }
+      .reveal {
+      background: transparent url("youtubePageSource-t.png");
+      }
+      span.html {
+      color: red;
+      }
+      span.head {
+      color: yellow;
+      }
+      span.title {
+      color: green;
+      }
+      span.body {
+      color: blue;
+      }
+      div.text {
+      text-align: center;
+      }
+      .bild {
+      height: 100px;
+      border: 0px;
+      }
+      .em {
+      color: #ffaa33;
+      }
+      .em2 {
+      color: red;
+      }
+      .reg {
+      color: white;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+      $("#gallery a").lightBox();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+	<section><!-- Einführung -->
+
+	  <section><!-- Einführung - Agenda -->
+	    <h1>Girlsday 2014</h1>
+	    <h3>Was lernen wir heute?</h3>
+	    <ul>
+	      <li>Einiges über das Internet</li>
+	      <li>HTML, die Sprache der Webseiten</li>
+	      <li>CSS, ihr Make-Up</li>
+	      <li>Javascript, ihr Motor</li>
+	    </ul>
+	  </section><!-- Einführung - Agenda -->
+
+	  <section><!-- Einführung - Jobs -->
+	    <h1>Jobs</h1>
+	    <h3>Beispiele für Jobs</h3>
+	    <ul>
+	      <li>SystemadministratorIn</li>
+	      <li>WebmasterIn</li>
+	      <li>SoftwareentwicklerIn</li>
+	      <li>Web(-Frontend) EntwicklerIn</li>
+	      <li>Content ManagerIn</li>
+	    </ul>
+	  </section><!-- Einführung - Jobs -->
+
+	  <section><!-- Einführung - Internet und WWW -->
+	    <h1>Internet und World Wide Web</h1>
+	    <ul>
+	      <li>Das Internet sind miteinander verbundene Rechner</li>
+	      <li>Das World Wide Web sind miteinander verbundene
+	      Dokumente</li>
+	      <li>Beides wird jetzt synonym verwendet</li>
+	    </ul>
+	    <div id="gallery">
+	      <a href="images/hyperlinks.png"
+		 data-lightbox="internet"><img src="images/hyperlinks.png"
+					       class="bild"></a>
+	      <a href="images/weltkarte.jpg"
+		 data-lightbox="internet"><img src="images/weltkarte.jpg"
+					       class="bild"></a>
+	    </div>
+	  </section><!-- Einführung - Internet und WWW -->
+
+	  <section><!-- Einführung - Internet / Adressen -->
+	    <h1>Was passiert im Netz?</h1>
+	    <ul>
+	      <li>Der <span class="em">Browser</span> ruft eine <span class="em">Adresse</span> auf</li>
+	      <li>Von dieser <span class="em">Adresse</span> bekommt er den Seiteninhalt</li>
+	      <li>Der Browser <span class="em">rendert</span> die Seite und zeigt sie mir an</li>
+	    </ul>
+	  </section><!-- Einführung - Internet / Adressen -->
+
+	</section><!-- Einführung -->
+
+
+	<section><!-- HTML -->
+	  <section>
+	    <h1>HTML</h1>
+	    <h3>Die Sprache des Internets</h3>
+	    <ul>	    
+	      <li>Alle Seiten im Internet sind in HTML geschrieben.</li>
+	      <li>HTML ist
+	      eine <span class="em">Auszeichnungssprache</span>.</li>
+	      <li>Die verschiedenen Teile eines Textes werden als solche bezeichnet</li>
+	      <ul>
+		<li>Titel</li>
+		<li>Untertitel</li>
+		<li>Paragraph</li>
+	      </ul>
+	    </ul>
+	   </section>
+	    <h1>HTML</h1>
+	    <h3>Ein Kind von XML</h3>
+	    HTML ist ein Ausschnitt von XML, und zwar der Teil der mit den
+	    Browsern abgesprochen ist. Die Browser wissen was sie mit den
+	    speziellen Tags anfangen sollen.
+	  </section>
+	  <section>
+	    <h1>Das Grundgerüst</h1>
+	    <div style="text-align: left;">
+	      <code>
+		<span class="html">&lt;html&gt;</span><br />
+		<span class="head">&nbsp;&nbsp;&lt;head&gt;</span><br />
+		<span class="title">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span>
+		Das HTML-Dateigerüst<span class="title">&lt;/title&gt;</span><br />
+		<span class="head">&nbsp;&nbsp;&lt;/head&gt;</span><br />
+		<span class="body">&nbsp;&nbsp;&lt;body&gt;</span><br />
+		<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;
+		  Und hier kommt mein schöner Text mit Überschriften, Links
+		  und Bildern hin
+		</div>
+		<span class="body">&nbsp;&nbsp;&lt;/body&gt;</span><br />
+		<span class="html">&lt;/html&gt;</span>
+	      </code>
+	    </div>
+	  </section>
+
+	  <section>
+	    <h1>Wichtige Text-Tags</h1>
+	    <ul>
+	      <li>Überschriften: <span class="em">&lt;h1&gt;&lt;/h1&gt;</span>, <span class="em">&lt;h2&gt;&lt;/h2&gt;</span> und <span class="em">&lt;h3&gt;&lt;/h3&gt;</span></li>
+	      <li>Paragraphen: <span class="em">&lt;p&gt;&lt;/p&gt;</span></li>
+	      <li>Bild: <span class="em">&lt;img /&gt;</span></li>
+	      <li>Link: <span class="em">&lt;a&gt;&lt;/a&gt;</span></li>
+	      <li>Aufzählung: 
+		<div class="em">
+		  &lt;ul&gt;<br />
+		  &nbsp;&nbsp;&lt;li&gt;<span class="reg">Ene </span>&lt;/li&gt;<br />
+		  &nbsp;&nbsp;&lt;li&gt;<span class="reg">Mene</span>&lt;/li&gt;<br />
+		  &nbsp;&nbsp;&lt;li&gt;<span class="reg">Muh </span>&lt;/li&gt;<br />
+		  &lt;/ul&gt;<br />
+		</div>
+	      </li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1>Tags - unter der Lupe</h1>
+	    <ul>
+	      <li>Es gibt einzelne oder paarweise Tags:
+		<ul>
+		  <li>Einzeln: <br />
+		  z.B. Zeilenumbruch <span class="em">&lt;br
+		  /&gt;</span></li>
+		  <li>Paarweise: <br />
+		    z.B. Überschrift <span class="em">&lt;h1&gt;</span>Ich
+		    bin eine Überschrift<span class="em">&lt;/h1&gt;</span></li>
+		</ul>
+	      </li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1>Tags - unter der Lupe</h1>
+	    <ul>
+	      <li>Manche Tags haben Parameter, z.B.</li>
+	      <li><span class="em">&lt;a <span class="em2">href="http://youtube.com"</span><span class="em">&gt;</span>
+		  Ich bin ein Link<span class="em">&lt;/a&gt;</span></li>
+	      <li>Sieht dann so aus: <a href="http://youtube.com">Ich bin ein Link</a></li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1>Tags - unter der Lupe</h1>
+	    <ul>
+	      <li><span class="em">&lt;img <span class="em2">src="sibylle.jpg"</span><span class="em">&gt;</li>
+	      <li>Sieht dann so aus: <br /><img src="sibylle.jpg"></li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1>Und jetzt los!</h1>
+	    <h3>Des Spaßes erster Teil: </h3>
+	    <div>Gestaltet eine eigene Seite und benutzt dabei die
+	    Seitenstruktur<br />
+	    <span  class="em">&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;body&gt;</span></div>
+	    <div>und die Tags<br />
+	    <span class="em">&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;p&gt;&lt;img&gt;&lt;ul&gt;</span></div>
+	  </section>
+	  <section data-markdown>
+	    <script type="text/template">
+	      ## Mögliches HTML:
+	      ```
+	      <html>
+		<head><title>Girlsday Testseite</title></head>
+		<body>
+		  <h1>Dies ist meine Girlsday Testseite</h1>
+		  <p>Mein erster Paragraph</p>
+		  <p>Und mein zweiter Paragraph, und danach ein Bild</p>
+		  <img src="sibylle.jpg">
+		</body>
+	      </html>
+	      ```
+	    </script>
+	  </section>
+	</section><!-- HTML -->
+
+
+	<section><!-- CSS -->
+	  <section>
+	    <h1>CSS - <br />Das Make-Up des Internets</h1>
+	    <p>HTML ist nur eine Auszeichnungssprache, das heißt es erzählt dem
+	      Browser nur "das ist eine Überschrift", und "das ist ein Text". Aber es sagt nicht wie diese Elemente auszusehen haben.</p>
+	    <p>Diesen Part übernimmt CSS.</p>
+	  </section>
+	  <section data-markdown>
+	    ## Wie sieht css aus?
+	    Mit css kann ich z.B. den Hintergrund der Seite einfärben:
+	    ```
+	    body {
+	      background-color: lightblue;
+	    }
+	    ```
+	    Oder den Hintergrund der Paragraphen:
+	    ```
+	    p {
+	      background-color: palegreen; 
+	    }
+	    ```
+	    [Anmerkung](#/4) zu Farben in CSS
+	  </section>
+	  <section data-markdown>
+	    <script type="text/template">
+	    ## Wo schreibt man das css hin?
+	    css kann zum Beispiel auf der Webseite stehen, eingeschlossen in die
+	    folgenden
+	    Tags: 
+	      ```
+	      <style>
+	        body {
+		background-color: lightblue;
+		}
+		p {
+		background-color: palegreen;
+		}
+	      </style>
+	      ```
+	    </script>
+	    
+	  </section>
+	  <section data-markdown>
+	    <script type="text/template">
+	    ## Ein paar interessante Möglichkeiten:
+	    ```
+	    backround-color: lightblue;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	    color: red;
+	    border: 1px dashed grey;
+	    ```
+	    </script>
+	  </section>
+	  <section data-markdown>
+	    <script type="text/template">
+	    ## Und jetzt wieder los!
+	    ### Des Spaßes zweiter Teil:
+	    Macht eure Seite bunt und benutzt dazu das css
+	    ```
+	    <style>
+	    body { background-color: lightblue; }
+	    p {
+	    color: red;
+	    background-color: grey;
+	    font-size: 1.2em;
+	    }
+	    </style>
+	    ```
+	    </script>
+	  </section>
+	</section><!-- CSS -->
+
+
+
+	<section><!-- JavaScript -->
+	  <h1>JavaScript - <br />Der Motor des Internets</h1>
+	  Mit JavaScript können sich die (Web)Seiten verändern während man sie
+	  anschaut.
+	</section>
+	<section data-markdown>
+	   <script type="text/template">
+	  ##Wie sieht JavaScript aus?
+	  Meist "inkludiert" man Funktionen über eine bestimmte Datei. Diese
+	  wird im Header der Webseite eingebunden:
+	     &lt;script src="lightbox/js/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+	   </script>
+	  <img class="moveRight" src="sibylle.jpg">
+	</section>
+	<section><!-- Sonstiges -->
+	  <section>
+	    <h1>Farben in CSS</h1>
+	    <ul>
+	    <li class="fragment current-visible">Farbnamen<br />
+	      <span style="color: red;">red;</span> 
+	      <span style="color: blue;">blue;</span> 
+	      <span style="color: lightblue;">lightblue; </span> 
+	      <span style="color: brown;">brown; </span> 
+	      <span style="color: palegreen;">palegreen;</span> 
+	    </li>
+	    <li class="fragment current-visible">Hexadezimal (von 0-f)<br />
+	      <span style="color: #ff0000;">#ff0000;</span> 
+	      <span style="color: #0000ff;">#0000ff;</span> 
+	      <span style="color: #add8e6;">#add8e6; </span> 
+	      <span style="color: #a52a2a;">#a52a2a; </span> 
+	      <span style="color: #90fa9b;">#90fa9b;</span> 
+	    </li>
+	    <li class="fragment current-visible">Als rgb-Werte (rot-grün-blau von 0-255)<br />
+	      <span style="color: rgb(255,0,0);">rgb(255,0,0);</span> 
+	      <span style="color: rgb(0,0,255);">rgb(0,0,255);</span> 
+	      <span style="color: rgb(173,216,230);">rgb(173,216,230); </span> 
+	      <span style="color: rgb(165,42,42);">rgb(165,42,42); </span> 
+	      <span style="color: rgb(144,250,155);">rgb(144,250,155);</span> 
+	    </li>
+	    </ul>
+	  </section>
+	</section>
+	  <style>
+	    .moveRight {
+	    position: absolute;
+	    }
+	  </style>
+	<script>
+	  $("h1:contains('JavaScript')").hover(function() {
+	    $(".moveRight").animate({ "marginLeft": "+500px"}, "slow");
+	  });
+	  $("h1:contains('JavaScript')").mouseleave(function() {
+	    $(".moveRight").animate({ "marginLeft": "-500px"}, "slow");
+	  });
+
+	</script><!-- Javascript -->
+
+
+      </div>
+    </div>
+  
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+      });
+    </script>
+  </body>
+</html>
