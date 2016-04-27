@@ -1,4 +1,4 @@
-# Dokumentation für den Girlsday/Zukunftstag 2016
+# Dokumentation für den Girlsday/Zukunftstag
 
-Dieser Teil der Dokumentation beschaeftigt sich mit HTML
+Dieser Teil der Dokumentation beschaeftigt sich mit CSS
 
