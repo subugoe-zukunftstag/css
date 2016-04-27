@@ -2,7 +2,7 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <title>Zukunftstag 2016</title>
+    <title>Zukunftstag - CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/default.css" id="theme">
@@ -73,91 +73,64 @@
 
 	<section><!-- Einführung -->
 	  <section><!-- Einführung - Agenda -->
-	    <h1>Zukunftstag 28.04.2016</h1>
-	    <ul>
-	      <li>HTML, die Sprache der Webseiten</li>
-	    </ul>
+	    <h1>Zukunftstag</h1>
+	    <h3>CSS, das Make-Up der Webseiten</h3>
 	  </section>
 	</section>
 
-	
-	<section><!-- HTML -->
+	<section><!-- Einführung -->
 	  <section>
-	    <h2>HTML</h2>
-	    <h3>Die Sprache des Internets</h3>
-	    <ul>	    
-	      <li>Alle Seiten im Internet sind in HTML geschrieben.</li>
-	      <li>HTML ist
-		eine <span class="em">Auszeichnungssprache</span>.</li>
-	      <li>Ein Text besteht aus verschiedenen Bestandteilen wie z.B.</li>
-	      <ul>
-		<li>Seitenkopf</li>
-		<li>Seitenkörper, z.B. mit
-		  <ul>
-		    <li>Titel</li>
-		    <li>Paragraph mit Text</li>
-		    <li>Bild</li>
-		  </ul>
-		</li>
-	      </ul>
+	    <h3 style="color: dark-gray">Das Make-Up des Internets</h3>
+	    <p>HTML ist nur eine Auszeichnungssprache, das heißt es erzählt dem
+	      Browser nur "das ist eine Überschrift", und "das ist ein Text". Aber es sagt nicht wie diese Elemente auszusehen haben.</p>
+	    <p>Diesen Part übernimmt CSS.</p>
+	  </section>
+	  <section data-markdown>
+	    ## Mit CSS kann man sich die HTML-Tags schnappen und ändern
+	    z.B. den Hintergrund der Seite einfärben:
+	    ```
+	    body {
+	      background-color: lightblue;
+	    }
+	    ```
+	    Oder den Hintergrund eines Paragraphen mit der id="achtung"
+	    ```
+	    #achtung {
+	      background-color: red; 
+	    }
+	    ```
+	  </section>
+	  <section>
+	      <h3>Wo schreibt man das CSS hin?</h3>
+	      <div style="text-align:left">CSS kann zum Beispiel auf der Webseite stehen, eingeschlossen in
+		die <span class="em">&lt;style&gt;</span>-Tags:<br />
+		<span class="red">&lt;style&gt;</span><br />
+		<span class="blue">&nbsp;&nbsp;body {</span><br />
+		<span class="green">&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;</span><br />
+		<span class="blue">&nbsp;&nbsp;}</span><br />
+		<span class="blue">&nbsp;&nbsp;#achtung {</span><br />
+  		<span class="green">&nbsp;&nbsp;&nbsp;&nbsp;background-color: palegreen;</span><br />
+		<span class="blue">&nbsp;&nbsp;}</span><br />
+		<span class="red">&lt;/style&gt;</span><br />
+	      </div>
+	  </section>
+	  
+	  <section>
+	    <h3>Etwas CSS zum rumspielen</h3>
+	    <ul>
+	      <li>background-color: red;</li>
+	      <li>font-style: italic;</li>
+	      <li>font-weight: bold;</li>
+	      <li>font-size: 120%;</li>
+	      <li>color: darkgray;</li>
+              <li>text-align: center;</li>
+	      <li>border: 2px solid green;</li>
 	    </ul>
 	  </section>
-	  
-	  <section>
-	    <h3>Das HTML Grundgerüst</h3>
-	    <div style="text-align: left;">
-	      <span class="blue">&lt;!DOCTYPE html&gt;</span><br />
-	      <span class="blue">&lt;html lang=de&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&lt;head&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span>
-	      Hier kommt Admin-Kram hin: Seitentitel, Scripte, CSS
-	      <span class="red">&lt;/title&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&lt;/head&gt;</span><br />
-	      <span class="green">&nbsp;&nbsp;&lt;body&gt;</span><br />
-	      &nbsp;&nbsp;&nbsp;&nbsp;
-	      Hier kommt das Zeug hin was man später auf der Webseite sieht</br>
-	      <span class="green">&nbsp;&nbsp;&lt;/body&gt;</span><br />
-	    </div>
-	  </section>
-	  <section>
-	    <h3>Das HTML für unser Spiel</h3>
-	    <div style="font-size: 60%; text-align: left;">
-	      <span class="blue">&lt;!DOCTYPE html&gt;</span><br />
-	      <span class="blue">&lt;html lang=de&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span>Mein erstes sebstgeschriebenes Spiel<span class="red">&lt;/title&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="jquery.min.js"&gt;</span>
-	      &lt;!-- hier kommt Javascript und jQuery hin --&gt;
-	      <span class="red">&lt;/script&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;</span>
-	      &lt;!-- hier kommt CSS hin --&gt;
-	      <span class="red">&lt;/style&gt;</span><br />
-	      <span class="red">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</span><br />
-	      <span class="green">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</span><br />
-	      <span class="green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img id="vader" src="</span>vader.png<span class="green">"&gt;</span><br />
-	      <span class="green">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</span><br />
-	      <span class="red">&lt;/html&gt;</span>
-	    </div>
-	  </section>
-	  
-	  <section>
-	    <h3>Ein paar Tags zum Rumspielen</h3>
-	    <div style="text-align:left">
-	      <span class="orange">&lt;p&gt;</span>
-	      Eigener TextText für den Abschnitt (Paragraphen)
-	      <span class="orange">&lt;p&gt;</span><br >
-	      <span class="orange">&lt;ul&gt;</span><br />
-	      &nbsp;&nbsp;<span class="orange">&lt;li&gt;</span>Listenelement 1<br />
-	      &nbsp;&nbsp;<span class="orange">&lt;li&gt;</span>Listenelement 2<br />
-	      &nbsp;&nbsp;<span class="orange">&lt;/ul&gt;</span><br />
-	      <span class="orange">&lt;img src="</span>bildname.jpg<span class="orange">"&gt;</span><br />
-	    </div>
-	  </section>
-	</section><!-- HTML -->
+	</section>
 	
-	
-	<section id="smiley">
+
+	  <section id="smiley">
 	    <script>
 	      $(document).keyup(function(event) {
                 if (Reveal.getCurrentSlide().id == "smiley") {
@@ -170,7 +143,7 @@
 	        }
 	      });
 	    </script>
-	    <h1>Viel Spaß beim Webseiten entwerfen!</h1>
+	    <h3>Viel Spaß beim Gestalten!</h3>
 	    <h6 id="smileycon">:)</h6>
 
 	  </section>
